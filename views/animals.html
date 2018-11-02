@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <title>Exercise with data tag!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="selected">Select something</div>
+    <ul id="animals">
+      <li data-animal-type="bird">Owl</li>
+      <li data-animal-type="fish">Salmon</li>
+      <li data-animal-type="spider">Tarantula</li>
+    </ul>
+  </div>
+</body>
+<script>
+  animals.onclick = function (e) {
+    console.log(`A ${e.target.innerHTML} is a ${e.target.getAttribute("data-animal-type")}.`);
+    selected.innerHTML = `A ${e.target.innerHTML} is a ${e.target.getAttribute("data-animal-type")}.`;
+    // alert(`A ${e.target.innerHTML} is a ${e.target.getAttribute("data-animal-type")}.`);
+  }
+</script>
+
+</html>
